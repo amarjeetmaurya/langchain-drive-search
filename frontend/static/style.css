@@ -1,0 +1,53 @@
+/* Custom Styles for Google Drive Search Agent */
+
+/* Left-align button text in sidebar and popovers */
+[data-testid="stSidebar"] div.stButton > button,
+div[data-testid="stPopoverBody"] div.stButton > button {
+    justify-content: flex-start;
+    text-align: left;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Beautiful hover effects for sidebar */
+[data-testid="stSidebar"] div.stButton > button:hover,
+div[data-testid="stPopoverBody"] div.stButton > button:hover {
+    background-color: var(--secondary-background-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Popover trigger button (the 3 dots) - Keep centered */
+[data-testid="stSidebar"] div.stPopover > button {
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem;
+}
+[data-testid="stSidebar"] div.stPopover > button:hover {
+    transform: none;
+    background-color: var(--secondary-background-color);
+}
+
+/* Chat Form Box Container */
+div[data-testid="stForm"] {
+    border: 1px solid var(--secondary-background-color);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Send button styling */
+div[data-testid="stForm"] div.stButton > button,
+div[data-testid="stForm"] button[kind="primary"] {
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+div[data-testid="stForm"] div.stButton > button:hover {
+    opacity: 0.85;
+    transform: scale(1.02);
+}
